@@ -84,11 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
   ------------------------------------------------------------- */
   const typingElem = document.getElementById('typingText');
   const roles = [
-    'Creative Digital Creator',
+    'Electronic & Electrical Engineer',
+    'Refrigeration & AC (RAC)',
+    'Audio Engineering & Hardware Tech',
     'Founder @ Zain Corp',
-    'Web & UI/UX Craftsman',
-    'Pemuda Kreatif Asal Blitar',
-    'Tech & Modern Brand Builder'
+    'Kelahiran Blitar, 20 Juni 2002'
   ];
   let roleIndex = 0;
   let charIndex = 0;
@@ -462,36 +462,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // Project Data for Modal Preview
   const projectsData = {
     '1': {
-      title: 'Zain Corp Digital Ecosystem',
-      tag: 'Branding & Web Platform',
-      corp: 'Official Zain Corp Venture',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80',
-      description: 'Platform terintegrasi yang dirancang khusus untuk memamerkan produk, portofolio, dan visi bisnis digital Zain Corp. Menggunakan struktur modular ringan dengan performa optimal untuk hosting global di Vercel.',
-      tech: ['HTML5', 'Modern CSS3', 'JavaScript ES6+', 'Vercel Edge Network', 'SEO Schema']
+      title: 'Perakitan & Wiring Power Amplifier Audio',
+      tag: 'Audio & Elektronika Daya',
+      corp: 'Hardware Lab',
+      image: 'audioenginer1.jpeg',
+      description: 'Dokumentasi perakitan modul penguat daya audio profesional. Mencakup penataan trafo toroid berkapasitas tinggi, kapasitor bank filter daya, sistem pendinginan heatsink bertingkat, serta proteksi speaker untuk menghasilkan keluaran audio bertenaga dan stabil.',
+      tech: ['Power Electronics', 'PCB Circuit Design', 'Toroidal Transformer', 'Capacitor Bank Filter', 'Class H/TD Architecture']
     },
     '2': {
-      title: 'Pulse Dashboard UI Experience',
-      tag: 'Analytics & Web App',
-      corp: 'Internal Tools Project',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
-      description: 'Antarmuka visual data metrik performa web dengan sentuhan dark mode minimalis, grafik responsif, dan palet warna kontras tinggi untuk memudahkan analisa data secara realtime.',
-      tech: ['Data Visualization', 'Glassmorphism UI', 'Responsive Design', 'Micro-interactions']
+      title: 'Pengujian True RMS & Kalibrasi DSP Audio Interface',
+      tag: 'Pengukuran & Kalibrasi',
+      corp: 'Audio Instrumentation',
+      image: 'audioenginer2.jpeg',
+      description: 'Pengujian nilai resistansi impedansi output (terbaca 51.59 kΩ pada multimeter digital Pro\'sKit MT-1707 True RMS), kontinuitas jalur sinyal, dan kalibrasi tegangan output pada perangkat audio interface 32-bit 96 kHz 256 DSP guna memastikan integritas sinyal tanpa distorsi.',
+      tech: ['True RMS Multimeter', 'Pro\'sKit MT-1707', 'DSP 32-bit 96kHz', 'Impedance & Continuity Testing']
     },
     '3': {
-      title: 'Zenith Casual Lifestyle Store',
-      tag: 'UI/UX Concept & Design',
-      corp: 'Creative Commercial Concept',
-      image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&auto=format&fit=crop&q=80',
-      description: 'Eksplorasi pengalaman belanja online berkonsep kasual perkotaan. Menghilangkan friksi checkout dengan alur belanja yang intuitif dan presentasi visual produk bernuansa estetik.',
-      tech: ['Figma Prototyping', 'Design System', 'User Journey Mapping', 'Mobile First UX']
+      title: 'Sistem Refrigerasi & Air Conditioning (RAC)',
+      tag: 'RAC & Tata Udara',
+      corp: 'HVAC-R Field',
+      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
+      description: 'Pemeliharaan dan penanganan instalasi sistem tata udara & pendingin ruangan, mencakup pengelasan pemipaan tembaga, proses pemvakuman sistem tertutup untuk membuang uap air, pengukuran tekanan kerja refrigeran dengan manifold gauge, serta pengecekan ampere kompresor.',
+      tech: ['Siklus Refrigerasi', 'AC Split & Inverter', 'Vacuum Evacuation', 'Manifold Pressure Testing', 'Electrical Control Wiring']
     },
     '4': {
-      title: 'Aura Interactive Canvas Studio',
-      tag: 'Computational Art & Canvas',
-      corp: 'Creative Lab Experiment',
-      image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&auto=format&fit=crop&q=80',
-      description: 'Laboratorium eksperimental grafis generatif interaktif yang memanfaatkan Web Audio API dan HTML5 Canvas untuk menciptakan pengalaman web interaktif yang dinamis.',
-      tech: ['HTML5 Canvas', 'Web Audio API', 'Physics Particles', 'Kinetic Typography']
+      title: 'Video Motion Logo Zain Corp',
+      tag: 'Motion Identity',
+      corp: 'Official Zain Corp Media',
+      isVideo: true,
+      video: 'logo.mp4',
+      image: 'ZainCorp.jpeg',
+      description: 'Video animasi logo resmi Zain Corp sebagai representasi visual identitas modern dalam bidang keteknikan dan inovasi media digital.',
+      tech: ['MP4 Video', 'Motion Graphics', 'Zain Corp Official', 'Digital Media']
     }
   };
 
@@ -499,6 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalCloseBtn = document.getElementById('modalCloseBtn');
   const modalDismissBtn = document.getElementById('modalDismissBtn');
   const modalImg = document.getElementById('modalImg');
+  const modalVideo = document.getElementById('modalVideo');
   const modalTag = document.getElementById('modalTag');
   const modalCorp = document.getElementById('modalCorp');
   const modalTitle = document.getElementById('modalTitle');
@@ -509,7 +512,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = projectsData[id];
     if (!data || !projectModal) return;
 
-    modalImg.src = data.image;
+    if (data.isVideo) {
+      if (modalImg) modalImg.classList.add('d-none');
+      if (modalVideo) {
+        modalVideo.classList.remove('d-none');
+        modalVideo.currentTime = 0;
+        modalVideo.play().catch(() => {});
+      }
+    } else {
+      if (modalVideo) {
+        modalVideo.pause();
+        modalVideo.classList.add('d-none');
+      }
+      if (modalImg) {
+        modalImg.classList.remove('d-none');
+        modalImg.src = data.image;
+      }
+    }
+
     modalTag.textContent = data.tag;
     modalCorp.textContent = data.corp;
     modalTitle.textContent = data.title;
@@ -527,6 +547,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeProjectModal() {
     if (!projectModal) return;
+    if (modalVideo) {
+      modalVideo.pause();
+    }
     projectModal.classList.remove('open');
     projectModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
