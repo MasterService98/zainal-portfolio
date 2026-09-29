@@ -1,6 +1,6 @@
 # 🌐 Website Data Diri & Portofolio — Muhammad Zainal Efendi
 
-Website data diri personal profesional bertema modern-kasual untuk **Muhammad Zainal Efendi** (Blitar, 20 Juni 2002) di bawah bendera **Zain Corp** (`@Zain_Corp.`). Fokus pada bidang **Electronic Engineering**, **Electrical Engineering**, **Refrigeration & Air Conditioning (RAC)**, serta **Audio Engineering**.
+Website data diri personal profesional bertema modern-kasual untuk **Muhammad Zainal Efendi** (Blitar, 20 Juni 2002) di bawah bendera **Zain Corp** (`@Zain_Corp.`). Fokus pada bidang **Electronic Engineering**, **Electrical Engineering**, **Refrigeration & Air Conditioning (RAC)**, serta **Audio Engineering**. Dilengkapi dengan mini game interaktif dan 16 dokumentasi proyek nyata.
 
 ---
 
@@ -8,8 +8,8 @@ Website data diri personal profesional bertema modern-kasual untuk **Muhammad Za
 - **Nama Lengkap:** MUHAMMAD ZAINAL EFENDI
 - **Tempat, Tanggal Lahir:** Blitar, 20 Juni 2002
 - **Bidang Spesialisasi:**
-  - Electronic Engineering (Rekayasa Elektronika & Sirkuit Daya)
-  - Electrical Engineering (Kelistrikan & Distribusi Daya)
+  - Electronic Engineering (Rekayasa Elektronika, Sirkuit PCB, dan SMPS)
+  - Electrical Engineering (Kelistrikan Industri, Panel Kontrol, dan PLC)
   - Refrigeration and Air Conditioning (RAC / Tata Udara & Sistem Pendingin)
   - Audio Engineering (Hardware Power Amplifier & Kalibrasi True RMS DSP)
 - **Instagram Resmi:** [@Zain_Corp.](https://instagram.com/Zain_Corp.)
@@ -18,38 +18,41 @@ Website data diri personal profesional bertema modern-kasual untuk **Muhammad Za
 
 ---
 
-## ✨ Fitur-Fitur Utama & Media Asli
-1. **Foto & Media Asli:**
-   - `ZainCorp.jpeg` — Foto persona profil utama kartu 3D tilt.
-   - `nyantai.jpeg` — Foto dokumentasi keseharian di bagian tentang diri.
-   - `audioenginer1.jpeg` — Dokumentasi perakitan modul power amplifier audio.
-   - `audioenginer2.jpeg` — Pengujian multimeter True RMS pada modul audio interface DSP.
-   - `logo.mp4` — Video animasi motion logo resmi Zain Corp.
-2. **Animasi Partikel Interaktif (HTML5 Canvas)**: Efek jejaring partikel dinamis yang merespons pergerakan kursor mouse secara presisi.
-3. **Kartu Foto 3D Tilt Interaktif**: Kartu persona profil dengan efek kemiringan perspektif 3 dimensi dan lencana mengambang (*floating badges*).
-4. **Kalkulator Umur & Hitung Mundur Ulang Tahun Real-time**: Menghitung otomatis usia saat ini berdasarkan kelahiran 20 Juni 2002 serta sisa hari menuju hari ulang tahun berikutnya.
-5. **Jam Waktu Nyata WIB (Blitar, ID)**: Sinkronisasi waktu lokal Jawa Timur (Asia/Jakarta) dengan indikator status hijau berdenyut.
-6. **Efek Suara Sintetis (Web Audio API)**: Suara klik dan interaksi halus tanpa perlu mengunduh file audio eksternal, dilengkapi tombol toggle mute/unmute.
-7. **Pengganti Palet Warna Aksen (Mood Switcher)**: Pilihan tema dinamis antara *Cyber Cyan & Coral*, *Sunset Amber*, dan *Emerald Clean*.
-8. **Salin Email Instan (1-Click Copy)**: Tombol salin email `muhzainal980@gmail.com` dengan pop-up notifikasi *toast* estetik.
-9. **Showcase Portofolio & Modal Pratinjau**: Filter karya berdasarkan kategori (Audio, Electronic, RAC, Branding) lengkap dengan popup detail foto & video.
-10. **Kursor Kustom Dinamis**: Titik kursor halus dan cincin pelacak dengan efek magnetik pada tombol.
-11. **Formulir Kontak Cepat**: Form interaktif yang langsung menyiapkan pesan email ke surel tujuan.
+## 🎮 Fitur Mini Game: Circuit Spark Catcher
+Mini game interaktif berbasis HTML5 Canvas yang dapat dimainkan langsung di website oleh pengunjung di desktop maupun perangkat mobile:
+- **Tujuan:** Tangkap voltase energi listrik (⚡ +10, 🔋 +25, 💎 IC Chip +50, ❄️ RAC Cool yang melambatkan waktu) dan hindari korsleting listrik berbahaya (⚠️).
+- **Kontrol:** Mouse tracking, tombol panah Kiri/Kanan (A/D), atau tombol sentuh mobile.
+- **Skor & Nyawa:** Menyimpan skor tertinggi (*High Score*) secara otomatis di browser via `localStorage` dan dilengkapi efek audio sintetis Web Audio API.
 
 ---
 
-## 📁 Struktur Berkas
-```text
-d:/VERCEL/
-├── index.html        # Struktur semantik HTML5 lengkap dengan SEO & Open Graph
-├── style.css         # Desain sistem responsif, glassmorphism, dan animasi CSS3
-├── script.js         # Logika interaktif, canvas particle, 3D tilt, jam WIB, audio & video modal
-├── vercel.json       # Konfigurasi routing & security headers untuk Vercel
-├── favicon.svg       # Favicon kustom monogram "Z" bercahaya
-├── ZainCorp.jpeg     # Foto persona Muhammad Zainal Efendi
-├── nyantai.jpeg      # Foto keseharian kasual
-├── audioenginer1.jpeg # Foto perakitan power amplifier audio
-├── audioenginer2.jpeg # Foto pengujian multimeter True RMS DSP
-├── logo.mp4          # Video animasi logo Zain Corp
-└── README.md         # Dokumentasi proyek & panduan deployment
+## 📸 Media Asli & Galeri Portofolio (16 Proyek)
+1. **`personal.jpeg`** — Foto studio profil profesional teknisi (dengan tombol ganti foto di Hero card).
+2. **`ZainCorp.jpeg`** — Foto persona kasual Zain Corp.
+3. **`nyantai.jpeg`** — Foto keseharian santai di bagian Tentang Saya.
+4. **`porto1.jpeg`** — Servis & penggantian kompresor AC outdoor Sharp R32 & pompa vakum.
+5. **`porto2.jpeg`** — Uji beban arus listrik kompresor AC (1.82 A) dengan Kyoritsu Clamp Meter.
+6. **`porto3.jpeg`** — Pengkabelan blok terminal input/output PLC Mitsubishi MELSEC.
+7. **`porto4.jpeg`** — Antarmuka tuning DSP crossover & parametric equalizer multi-channel.
+8. **`porto5.jpeg`** — Panel kontrol kelistrikan industri Omron S8VK 24V & Panasonic breaker.
+9. **`porto6.jpeg`** — Pengukuran suhu termal inframerah laser presisi Extech 42510A (319.8 °C).
+10. **`porto7.jpeg`** — Sistem unit traction battery charger 48V 60A industri 3-phase.
+11. **`porto8.jpeg`** — Pemeriksaan mikroskopis jalur sirkuit PCB & titik solder SMD.
+12. **`porto9.jpeg`** — Troubleshooting modul catu daya switching SMPS (MPW4603E).
+13. **`porto10.jpeg`** — Perbaikan perangkat keras berbasis mikrokontroler & port micro-USB.
+14. **`porto11.jpeg`** — Panel boks otomasi PLC Mitsubishi MELSEC FX3S-30M & relai industri.
+15. **`porto12.jpeg`** — Integrasi display karakter LCD 16x2 pembaca ID kartu RFID.
+16. **`porto13.jpeg`** — Sirkuit koil antena RFID induktif & mikrokontroler STM8 (8.000 MHz).
+17. **`audioenginer1.jpeg`** — Perakitan modul power amplifier audio & trafo toroid.
+18. **`audioenginer2.jpeg`** — Kalibrasi tegangan True RMS & pengujian impedansi (51.59 kΩ).
+19. **`logo.mp4`** — Video animasi motion logo resmi Zain Corp.
+
+---
+
+## 🚀 Panduan Deploy ke Vercel
+Proyek ini siap di-push ke GitHub untuk auto-deploy otomatis ke Vercel:
+```bash
+git add .
+git commit -m "feat: add personal photo, 13 portfolio works, and circuit spark mini game"
+git push origin main
 ```

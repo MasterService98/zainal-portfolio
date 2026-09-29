@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Zainal Efendi | Electronic & Electrical Engineer | RAC | Zain Corp</title>
-  <meta name="description" content="Profil data diri Muhammad Zainal Efendi (Blitar, 20 Juni 2002). Fokus di bidang Electronic Engineering, Electrical Engineering, Refrigeration & Air Conditioning (RAC), dan Audio Engineering. Founder @Zain_Corp.">
+  <meta name="description" content="Profil data diri & portofolio resmi Muhammad Zainal Efendi (Blitar, 20 Juni 2002). Fokus di bidang Electronic Engineering, Electrical Engineering, Refrigeration & Air Conditioning (RAC), dan Audio Engineering. Founder @Zain_Corp.">
   <meta name="keywords" content="Muhammad Zainal Efendi, Electronic Engineer, Electrical Engineer, RAC, Refrigeration, Air Conditioning, Audio Engineer, Zain Corp, Blitar">
   <meta name="author" content="Muhammad Zainal Efendi">
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Muhammad Zainal Efendi - Electronic & Electrical Engineer | RAC">
   <meta property="og:description" content="Profil data diri & portofolio Muhammad Zainal Efendi. Electronic & Electrical Engineer, Refrigeration & Air Conditioning (RAC), Audio Engineering. Blitar, 20 Juni 2002. Instagram: @Zain_Corp.">
-  <meta property="og:image" content="ZainCorp.jpeg">
+  <meta property="og:image" content="personal.jpeg">
   <meta property="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
@@ -65,6 +65,7 @@
         <a href="#facts" class="nav-link">Data Diri</a>
         <a href="#projects" class="nav-link">Portofolio</a>
         <a href="#skills" class="nav-link">Bidang Keahlian</a>
+        <a href="#minigame" class="nav-link"><i data-lucide="gamepad-2"></i> Mini Game</a>
         <a href="#contact" class="nav-link nav-btn-cta">Kontak</a>
       </nav>
 
@@ -127,6 +128,10 @@
               <i data-lucide="wrench"></i>
               <span>Lihat Hasil Kerja</span>
             </a>
+            <a href="#minigame" class="btn btn-glass" title="Mainkan Mini Game">
+              <i data-lucide="gamepad-2"></i>
+              <span>Main Game</span>
+            </a>
             <button class="btn btn-glass copy-email-btn" data-email="muhzainal980@gmail.com" title="Salin Email">
               <i data-lucide="copy"></i>
               <span class="copy-text">Salin Email</span>
@@ -153,7 +158,7 @@
           </div>
         </div>
 
-        <!-- Right Hero Visual (3D Tilt Interactive Photo Card with ZainCorp.jpeg) -->
+        <!-- Right Hero Visual (3D Tilt Interactive Photo Card with Switcher) -->
         <div class="hero-visual fade-in-up delay-2">
           <div class="card-3d-wrapper" id="heroCardWrapper">
             <div class="hero-photo-card" id="heroCard">
@@ -170,8 +175,14 @@
                 <span class="card-status-chip">Aktif 2026</span>
               </div>
 
-              <!-- Main Hero Image Frame: ZainCorp.jpeg -->
+              <!-- Main Hero Image Frame: ZainCorp.jpeg & personal.jpeg switcher -->
               <div class="photo-frame">
+                <!-- Interactive Photo Switcher Button -->
+                <button class="photo-switch-btn" id="photoSwitchBtn" title="Ganti Tampilan Foto">
+                  <i data-lucide="refresh-cw"></i>
+                  <span id="photoSwitchText">Foto Studio</span>
+                </button>
+
                 <img 
                   src="ZainCorp.jpeg" 
                   alt="Foto Muhammad Zainal Efendi - Zain Corp" 
@@ -346,19 +357,19 @@
       </div>
     </section>
 
-    <!-- SECTION: TENTANG SAYA (CASUAL, HUMBLE & PROFESSIONAL) -->
+    <!-- SECTION: TENTANG SAYA (FEATURING personal.jpeg & nyantai.jpeg) -->
     <section class="section-padding about-section" id="about">
       <div class="container">
         
         <div class="about-grid">
           
-          <!-- Left: Real Visual Collage (nyantai.jpeg & audioenginer1.jpeg) -->
+          <!-- Left: Real Visual Collage (personal.jpeg & nyantai.jpeg) -->
           <div class="about-visual">
             <div class="collage-wrapper">
               <div class="collage-main-card">
                 <img 
-                  src="nyantai.jpeg" 
-                  alt="Muhammad Zainal Efendi Keseharian Santai"
+                  src="personal.jpeg" 
+                  alt="Muhammad Zainal Efendi Teknisi Studio"
                   class="collage-img"
                   loading="lazy"
                 >
@@ -370,17 +381,17 @@
                 </div>
               </div>
 
-              <!-- Secondary Floating Image Badge (Real Audio Engineer PCB) -->
+              <!-- Secondary Floating Image Badge (nyantai.jpeg) -->
               <div class="collage-sub-card">
                 <img 
-                  src="audioenginer1.jpeg" 
-                  alt="Modul Power Amplifier Audio Hardware"
+                  src="nyantai.jpeg" 
+                  alt="Muhammad Zainal Efendi Keseharian Santai"
                   class="sub-img"
                   loading="lazy"
                 >
                 <div class="sub-info">
-                  <span class="sub-title">Audio Hardware Work</span>
-                  <span class="sub-desc">Zain Corp Lab</span>
+                  <span class="sub-title">Keseharian Santai</span>
+                  <span class="sub-desc">Zain Corp Lab & Lapangan</span>
                 </div>
               </div>
 
@@ -454,74 +465,414 @@
       </div>
     </section>
 
-    <!-- SECTION: PORTOFOLIO & HASIL KERJA (DOKUMENTASI ASLI ZAINAL) -->
+    <!-- SECTION: PORTOFOLIO LENGKAP (16 DOKUMENTASI KERJA ASLI ZAINAL) -->
     <section class="section-padding projects-section" id="projects">
       <div class="container">
         
         <div class="section-header text-center">
           <span class="section-badge"><i data-lucide="folder-git-2"></i> Portofolio & Dokumentasi Kerja</span>
           <h2 class="section-title">Dokumentasi Proyek & Pekerjaan</h2>
-          <p class="section-subtitle">Dokumentasi nyata dari perakitan audio hardware, pengukuran sinyal, sistem pendingin, dan identitas Zain Corp</p>
+          <p class="section-subtitle">Dokumentasi nyata dari perakitan audio hardware, pengukuran True RMS, servis RAC, PLC otomasi, perbaikan SMPS, dan identitas Zain Corp</p>
         </div>
 
         <!-- Filter Buttons -->
         <div class="project-filters" id="projectFilters">
-          <button class="filter-btn active" data-filter="all">Semua Dokumentasi</button>
+          <button class="filter-btn active" data-filter="all">Semua Dokumentasi (16)</button>
           <button class="filter-btn" data-filter="audio">Audio Engineering</button>
-          <button class="filter-btn" data-filter="electronic">Electronic & Electrical</button>
-          <button class="filter-btn" data-filter="rac">RAC & Tata Udara</button>
+          <button class="filter-btn" data-filter="electronic">Electronic</button>
+          <button class="filter-btn" data-filter="electrical">Electrical & Panel</button>
+          <button class="filter-btn" data-filter="rac">RAC & Pendingin</button>
           <button class="filter-btn" data-filter="branding">Zain Corp Media</button>
         </div>
 
-        <!-- Projects Grid -->
+        <!-- Projects Grid (16 Full Real Portfolio Cards) -->
         <div class="projects-grid">
           
-          <!-- Project 1: audioenginer1.jpeg -->
-          <article class="project-card" data-category="audio electronic">
+          <!-- Project 1: porto1.jpeg (RAC Teardown) -->
+          <article class="project-card" data-category="rac electronic">
             <div class="project-img-wrapper">
-              <img 
-                src="audioenginer1.jpeg" 
-                alt="Perakitan & Troubleshooting Power Amplifier Audio"
-                class="project-img"
-                loading="lazy"
-              >
+              <img src="porto1.jpeg" alt="Servis & Penggantian Kompresor AC Outdoor RAC" class="project-img" loading="lazy">
               <div class="project-overlay-action">
                 <button class="open-modal-btn" data-project="1" aria-label="Lihat Detail Proyek 1">
-                  <i data-lucide="eye"></i>
-                  <span>Detail Lengkap</span>
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">RAC & Pendingin</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Pekerjaan Lapangan</span>
+                <span class="project-corp">HVAC-R Outdoor</span>
+              </div>
+              <h3 class="project-title">Servis & Penggantian Kompresor AC Outdoor</h3>
+              <p class="project-snippet">Pembongkaran unit outdoor AC Sharp R32, pemipaan tembaga, pemasangan kompresor pengganti, pemvakuman dengan pompa vakum Lakoni, serta persiapan manifold.</p>
+              <div class="project-tech-stack">
+                <span>Kompresor R32</span>
+                <span>Pompa Vakum</span>
+                <span>Manifold Gauge</span>
+                <span>Brazing Tembaga</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: porto2.jpeg (Clamp Meter) -->
+          <article class="project-card" data-category="rac electrical">
+            <div class="project-img-wrapper">
+              <img src="porto2.jpeg" alt="Pengukuran Ampere Kompresor AC dengan Kyoritsu Clamp Meter" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="2" aria-label="Lihat Detail Proyek 2">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Pengukuran Arus</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Uji Beban Arus</span>
+                <span class="project-corp">Kyoritsu SNAP 2033</span>
+              </div>
+              <h3 class="project-title">Uji Arus Beban AC Kompresor (1.82 A)</h3>
+              <p class="project-snippet">Pengukuran arus beban kerja AC menggunakan tang ampere digital Kyoritsu KEW SNAP 2033 guna memastikan konsumsi daya normal dan tidak terjadi overload.</p>
+              <div class="project-tech-stack">
+                <span>Kyoritsu Clamp Meter</span>
+                <span>Arus Listrik 1.82A</span>
+                <span>Monitoring Proteksi</span>
+                <span>Efisiensi Daya</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: porto3.jpeg (MELSEC PLC) -->
+          <article class="project-card" data-category="electrical electronic">
+            <div class="project-img-wrapper">
+              <img src="porto3.jpeg" alt="Mitsubishi MELSEC PLC I/O Terminal Wiring" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="3" aria-label="Lihat Detail Proyek 3">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">PLC & Otomasi</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Kontrol Industri</span>
+                <span class="project-corp">Mitsubishi Electric</span>
+              </div>
+              <h3 class="project-title">Pengkabelan Terminal I/O Mitsubishi MELSEC PLC</h3>
+              <p class="project-snippet">Penataan blok terminal input/output PLC Mitsubishi MELSEC dengan isolasi sepatu kabel kuning dan pengelompokan jalur sinyal kontrol industri.</p>
+              <div class="project-tech-stack">
+                <span>MELSEC PLC</span>
+                <span>I/O Wiring</span>
+                <span>Sinyal Kontrol</span>
+                <span>Standar Industri</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: porto4.jpeg (DSP Software Tuning) -->
+          <article class="project-card" data-category="audio electronic">
+            <div class="project-img-wrapper">
+              <img src="porto4.jpeg" alt="Tuning DSP Audio Multi-Channel The Santoso" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="4" aria-label="Lihat Detail Proyek 4">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">DSP Tuning</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Audio Signal DSP</span>
+                <span class="project-corp">Digital Processing</span>
+              </div>
+              <h3 class="project-title">Tuning Parametric EQ & Crossover DSP Multi-Channel</h3>
+              <p class="project-snippet">Kalibrasi kurva respon frekuensi, konfigurasi High-Pass / Low-Pass crossover filter, gain level, routing matrix, dan limiter pada prosesor audio digital multi-channel.</p>
+              <div class="project-tech-stack">
+                <span>Parametric EQ</span>
+                <span>Crossover Slope</span>
+                <span>DSP Matrix</span>
+                <span>Gain Staging</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: porto5.jpeg (Industrial Control Panel) -->
+          <article class="project-card" data-category="electrical">
+            <div class="project-img-wrapper">
+              <img src="porto5.jpeg" alt="Panel Listrik Industri Omron PSU & Panasonic Breaker" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="5" aria-label="Lihat Detail Proyek 5">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Panel Kontrol Listrik</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Distribusi Daya</span>
+                <span class="project-corp">Omron & Panasonic</span>
+              </div>
+              <h3 class="project-title">Panel Kontrol Kelistrikan & Catu Daya Industri</h3>
+              <p class="project-snippet">Integrasi catu daya Omron S8VK-C24024 24VDC, sirkuit pemutus arus Panasonic BBW-30, relay kontaktor, serta jalur distribusi tegangan DC dan AC.</p>
+              <div class="project-tech-stack">
+                <span>Omron S8VK 24V</span>
+                <span>Panasonic Breaker</span>
+                <span>Relay Switching</span>
+                <span>Panel Enclosure</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: porto6.jpeg (Extech Infrared Thermometer) -->
+          <article class="project-card" data-category="rac electronic">
+            <div class="project-img-wrapper">
+              <img src="porto6.jpeg" alt="Pengukuran Suhu Termal Presisi Extech Laser" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="6" aria-label="Lihat Detail Proyek 6">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Uji Termal Presisi</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Uji Panas Tinggi</span>
+                <span class="project-corp">Extech 42510A</span>
+              </div>
+              <h3 class="project-title">Pengukuran Suhu Termal Presisi Laser (319.8 °C)</h3>
+              <p class="project-snippet">Monitoring temperatur tinggi pada elemen pemanas/disipasi termal menggunakan termometer inframerah presisi Extech 42510A dengan pembacaan maksimal 324.7 °C.</p>
+              <div class="project-tech-stack">
+                <span>Extech Infrared</span>
+                <span>Suhu 319.8°C</span>
+                <span>Laser Aiming</span>
+                <span>Analisis Termal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: porto7.jpeg (Traction Battery Charger 48V) -->
+          <article class="project-card" data-category="electrical">
+            <div class="project-img-wrapper">
+              <img src="porto7.jpeg" alt="Sistem Traction Battery Charger 48V 60A Industri" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="7" aria-label="Lihat Detail Proyek 7">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Kelistrikan Daya Tinggi</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Sistem 3-Phase</span>
+                <span class="project-corp">Traction Charger</span>
+              </div>
+              <h3 class="project-title">Traction Battery Charger Industri 48V / 60A</h3>
+              <p class="project-snippet">Pemeliharaan unit pengisi daya baterai traksi berdaya tinggi 48V 60A dengan kontrol auto-equaliser dan sistem proteksi sirkuit tegangan tinggi.</p>
+              <div class="project-tech-stack">
+                <span>Tegangan 48V</span>
+                <span>Arus 60A</span>
+                <span>3-Phase Input</span>
+                <span>Auto Equaliser</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: porto8.jpeg (Microscopic PCB Inspection) -->
+          <article class="project-card" data-category="electronic">
+            <div class="project-img-wrapper">
+              <img src="porto8.jpeg" alt="Analisa Mikroskopis Jalur Sirkuit PCB & SMD" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="8" aria-label="Lihat Detail Proyek 8">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Mikroelektronika</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Pemeriksaan Mikroskop</span>
+                <span class="project-corp">SMD Diagnostics</span>
+              </div>
+              <h3 class="project-title">Inspeksi Mikroskopis Jalur Sirkuit PCB & Titik Solder</h3>
+              <p class="project-snippet">Pemeriksaan visual pembesaran tinggi untuk mendeteksi jalur tembaga putus, solder retak (cold joint), serta jembatan timah korsleting pada papan PCB mikro.</p>
+              <div class="project-tech-stack">
+                <span>Microscopic View</span>
+                <span>SMD Inspection</span>
+                <span>PCB Trace Trace</span>
+                <span>Fault Detection</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 9: porto9.jpeg (Power Supply SMPS Repair) -->
+          <article class="project-card" data-category="electronic electrical">
+            <div class="project-img-wrapper">
+              <img src="porto9.jpeg" alt="Modul Catu Daya SMPS Power Supply Repair" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="9" aria-label="Lihat Detail Proyek 9">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Catu Daya SMPS</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Perbaikan Elektronika</span>
+                <span class="project-corp">Switching PSU</span>
+              </div>
+              <h3 class="project-title">Perbaikan & Troubleshooting Modul SMPS Power Supply</h3>
+              <p class="project-snippet">Pengecekan komponen penyearah AC ke DC, trafo frekuensi tinggi, switching transistor MOSFET dengan heatsink, serta kapasitor filter keluaran daya.</p>
+              <div class="project-tech-stack">
+                <span>SMPS Board</span>
+                <span>Trafo Switching</span>
+                <span>Heatsink MOSFET</span>
+                <span>Regulasi Tegangan</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 10: porto10.jpeg (Microcontroller Repair) -->
+          <article class="project-card" data-category="electronic">
+            <div class="project-img-wrapper">
+              <img src="porto10.jpeg" alt="Troubleshooting Microcontroller & Hardware Device" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="10" aria-label="Lihat Detail Proyek 10">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Hardware Micro</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Diagnostik Presisi</span>
+                <span class="project-corp">Embedded Hardware</span>
+              </div>
+              <h3 class="project-title">Troubleshooting Perangkat Keras Mikrokontroler</h3>
+              <p class="project-snippet">Pembongkaran dan perbaikan rangkaian perangkat portabel dengan mikrokontroler SMD, port Micro-USB, slot SD card, speaker internal, dan indikator LED.</p>
+              <div class="project-tech-stack">
+                <span>MCU IC Chip</span>
+                <span>Micro USB Port</span>
+                <span>SMD Resistor</span>
+                <span>Jalur Sinyal I/O</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 11: porto11.jpeg (PLC FX3S Panel) -->
+          <article class="project-card" data-category="electrical electronic">
+            <div class="project-img-wrapper">
+              <img src="porto11.jpeg" alt="Panel Otomasi Mitsubishi MELSEC FX3S & Relays" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="11" aria-label="Lihat Detail Proyek 11">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Otomasi PLC FX3S</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Panel Box Otomasi</span>
+                <span class="project-corp">Mitsubishi FX3S-30M</span>
+              </div>
+              <h3 class="project-title">Panel Otomasi Mitsubishi MELSEC FX3S-30M & Relai</h3>
+              <p class="project-snippet">Perancangan dan pengkabelan panel kontrol otomatis berbasis PLC Mitsubishi MELSEC FX3S-30M, relay industri dengan indikator LED, dan terminal blok rapi.</p>
+              <div class="project-tech-stack">
+                <span>PLC FX3S-30M</span>
+                <span>Relay 24VDC</span>
+                <span>Terminal Wiring</span>
+                <span>Logika Kontrol</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 12: porto12.jpeg (LCD 16x2 RFID) -->
+          <article class="project-card" data-category="electronic">
+            <div class="project-img-wrapper">
+              <img src="porto12.jpeg" alt="Integrasi Modul Display LCD 16x2 RFID Reader" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="12" aria-label="Lihat Detail Proyek 12">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Antarmuka Display</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Sistem Pembaca ID</span>
+                <span class="project-corp">Embedded Display</span>
+              </div>
+              <h3 class="project-title">Integrasi Modul Display LCD 16x2 Pembaca ID Kartu</h3>
+              <p class="project-snippet">Pengujian pembacaan data kartu identitas (RFID/Smartcard) yang ditampilkan secara real-time pada modul karakter LCD 16x2 berlatar biru.</p>
+              <div class="project-tech-stack">
+                <span>LCD 16x2 Karakter</span>
+                <span>Protokol Komunikasi</span>
+                <span>ID Kartu Reader</span>
+                <span>Embedded Interface</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 13: porto13.jpeg (RFID Antenna & STM8) -->
+          <article class="project-card" data-category="electronic">
+            <div class="project-img-wrapper">
+              <img src="porto13.jpeg" alt="Sirkuit Koil RFID Antena & Microcontroller STM8" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="13" aria-label="Lihat Detail Proyek 13">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
+                </button>
+              </div>
+              <span class="project-tag-badge">Sirkuit Frekuensi RFID</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-year">Frekuensi Tinggi</span>
+                <span class="project-corp">STM8 & Crystal 8MHz</span>
+              </div>
+              <h3 class="project-title">Sirkuit Antena Koil Induktif & Mikrokontroler STM8</h3>
+              <p class="project-snippet">Detail rancangan koil antena tembaga lingkaran untuk induksi frekuensi RFID, kristal osilator 8.000 MHz, dan chip mikrokontroler STM8.</p>
+              <div class="project-tech-stack">
+                <span>Koil Induksi RFID</span>
+                <span>Crystal 8.000 MHz</span>
+                <span>STM8 Microcontroller</span>
+                <span>Resonansi Sinyal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 14: audioenginer1.jpeg -->
+          <article class="project-card" data-category="audio electronic">
+            <div class="project-img-wrapper">
+              <img src="audioenginer1.jpeg" alt="Perakitan & Troubleshooting Power Amplifier Audio" class="project-img" loading="lazy">
+              <div class="project-overlay-action">
+                <button class="open-modal-btn" data-project="14" aria-label="Lihat Detail Proyek 14">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
                 </button>
               </div>
               <span class="project-tag-badge">Audio & Elektronika Daya</span>
             </div>
             <div class="project-card-body">
               <div class="project-meta-row">
-                <span class="project-year">Dokumentasi Kerja</span>
-                <span class="project-corp">Hardware Lab</span>
+                <span class="project-year">Hardware Pro-Audio</span>
+                <span class="project-corp">Power Amplifier</span>
               </div>
-              <h3 class="project-title">Perakitan & Wiring Power Amplifier Audio</h3>
+              <h3 class="project-title">Perakitan & Wiring Power Amplifier Audio Profesional</h3>
               <p class="project-snippet">Penataan modul sirkuit penguat daya audio profesional, konfigurasi trafo toroid, filter kapasitor bank, proteksi speaker, dan manajemen pendinginan heatsink.</p>
               <div class="project-tech-stack">
                 <span>Power Electronics</span>
-                <span>PCB Circuit</span>
-                <span>Toroidal Transformer</span>
-                <span>Thermal Dissipation</span>
+                <span>Trafo Toroid</span>
+                <span>Capacitor Bank Filter</span>
+                <span>Speaker Protection</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 2: audioenginer2.jpeg -->
+          <!-- Project 15: audioenginer2.jpeg -->
           <article class="project-card" data-category="audio electronic">
             <div class="project-img-wrapper">
-              <img 
-                src="audioenginer2.jpeg" 
-                alt="Pengukuran & Kalibrasi Output Sinyal Audio True RMS"
-                class="project-img"
-                loading="lazy"
-              >
+              <img src="audioenginer2.jpeg" alt="Pengujian True RMS & Kalibrasi DSP Audio Interface" class="project-img" loading="lazy">
               <div class="project-overlay-action">
-                <button class="open-modal-btn" data-project="2" aria-label="Lihat Detail Proyek 2">
-                  <i data-lucide="eye"></i>
-                  <span>Detail Lengkap</span>
+                <button class="open-modal-btn" data-project="15" aria-label="Lihat Detail Proyek 15">
+                  <i data-lucide="eye"></i> <span>Detail Lengkap</span>
                 </button>
               </div>
               <span class="project-tag-badge">Pengukuran & Kalibrasi</span>
@@ -529,71 +880,28 @@
             <div class="project-card-body">
               <div class="project-meta-row">
                 <span class="project-year">Pengujian Presisi</span>
-                <span class="project-corp">Instrumentation</span>
+                <span class="project-corp">True RMS Multimeter</span>
               </div>
-              <h3 class="project-title">Pengujian True RMS & Kalibrasi DSP Audio Interface</h3>
-              <p class="project-snippet">Pengukuran impedansi resistif (51.59 kΩ), kontinuitas jalur sinyal, dan kalibrasi tegangan output pada perangkat audio interface 32-bit 96 kHz 256 DSP menggunakan multimeter Pro'sKit MT-1707.</p>
+              <h3 class="project-title">Pengujian True RMS & Kalibrasi DSP Audio (51.59 kΩ)</h3>
+              <p class="project-snippet">Pengukuran impedansi resistif (51.59 kΩ pada Pro'sKit MT-1707) dan kalibrasi tegangan output audio interface 32-bit 96 kHz 256 DSP.</p>
               <div class="project-tech-stack">
-                <span>True RMS Multimeter</span>
-                <span>DSP Calibration</span>
+                <span>Pro'sKit MT-1707</span>
+                <span>True RMS</span>
+                <span>DSP 32-bit 96kHz</span>
                 <span>Impedance Test</span>
-                <span>Signal Integrity</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 3: RAC & Tata Udara -->
-          <article class="project-card" data-category="rac electronic">
-            <div class="project-img-wrapper">
-              <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80" 
-                alt="Refrigeration and Air Conditioning RAC System Maintenance"
-                class="project-img"
-                loading="lazy"
-              >
-              <div class="project-overlay-action">
-                <button class="open-modal-btn" data-project="3" aria-label="Lihat Detail Proyek 3">
-                  <i data-lucide="eye"></i>
-                  <span>Detail Lengkap</span>
-                </button>
-              </div>
-              <span class="project-tag-badge">RAC & Tata Udara</span>
-            </div>
-            <div class="project-card-body">
-              <div class="project-meta-row">
-                <span class="project-year">HVAC-R Field</span>
-                <span class="project-corp">Thermal & Air</span>
-              </div>
-              <h3 class="project-title">Sistem Refrigerasi & Air Conditioning (RAC)</h3>
-              <p class="project-snippet">Pekerjaan instalasi pemipaan tembaga, proses pemvakuman sistem tertutup, pengukuran tekanan kerja refrigeran dengan manifold gauge, serta optimasi efisiensi kompresor AC.</p>
-              <div class="project-tech-stack">
-                <span>Siklus Refrigerasi</span>
-                <span>AC Inverter & Split</span>
-                <span>Manifold Testing</span>
-                <span>Vacuum Evacuation</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 4: Video Logo mp4 -->
+          <!-- Project 16: logo.mp4 -->
           <article class="project-card" data-category="branding">
             <div class="project-img-wrapper video-card-wrapper">
-              <video 
-                class="project-video-preview" 
-                autoplay 
-                muted 
-                loop 
-                playsinline 
-                poster="ZainCorp.jpeg"
-                id="brandVideoPreview"
-              >
+              <video class="project-video-preview" autoplay muted loop playsinline poster="ZainCorp.jpeg" id="brandVideoPreview">
                 <source src="logo.mp4" type="video/mp4">
-                Browser Anda tidak mendukung tag video.
               </video>
               <div class="project-overlay-action">
-                <button class="open-modal-btn" data-project="4" aria-label="Lihat Detail Video Logo">
-                  <i data-lucide="play-circle"></i>
-                  <span>Putar Video Lengkap</span>
+                <button class="open-modal-btn" data-project="16" aria-label="Putar Video Motion Logo">
+                  <i data-lucide="play-circle"></i> <span>Putar Video Lengkap</span>
                 </button>
               </div>
               <span class="project-tag-badge"><i data-lucide="video"></i> Video Logo Zain Corp</span>
@@ -604,11 +912,11 @@
                 <span class="project-corp">Official Logo</span>
               </div>
               <h3 class="project-title">Video Motion Logo Zain Corp</h3>
-              <p class="project-snippet">Animasi identitas visual resmi Zain Corp yang menggabungkan simbol dinamis, transisi halus, dan estetika visual kontemporer.</p>
+              <p class="project-snippet">Animasi identitas visual resmi Zain Corp yang menggabungkan simbol dinamis, transisi halus, dan estetika visual modern.</p>
               <div class="project-tech-stack">
                 <span>Motion Graphics</span>
                 <span>MP4 High Definition</span>
-                <span>Zain Corp Branding</span>
+                <span>Zain Corp Official</span>
               </div>
             </div>
           </article>
@@ -653,7 +961,7 @@
               </div>
               <div class="skill-bar-item">
                 <div class="bar-info">
-                  <span>Instalasi Listrik & Pengkabelan</span>
+                  <span>Instalasi Listrik & Panel PLC</span>
                   <span class="bar-percent">88%</span>
                 </div>
                 <div class="bar-track"><div class="bar-fill" style="width: 88%;"></div></div>
@@ -728,6 +1036,84 @@
             </div>
           </div>
 
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: MINI GAME - CIRCUIT SPARK CATCHER -->
+    <section class="section-padding minigame-section" id="minigame">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-badge"><i data-lucide="gamepad-2"></i> Zona Interaktif & Hiburan</span>
+          <h2 class="section-title">Mini Game: Circuit Spark Catcher</h2>
+          <p class="section-subtitle">Uji ketangkasan Anda! Kendalikan voltage core untuk menangkap energi listrik (+5V, +12V, RAC Cool) dan hindari korsleting berbahaya!</p>
+        </div>
+
+        <div class="arcade-box">
+          <!-- Arcade HUD Bar -->
+          <div class="arcade-hud">
+            <div class="hud-item">
+              <span class="hud-label">Skor</span>
+              <span class="hud-val" id="gameScore">0</span>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">Skor Tertinggi</span>
+              <span class="hud-val hud-high" id="gameHighScore">0</span>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">Nyawa</span>
+              <span class="hud-val hud-lives" id="gameLives">⚡⚡⚡</span>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">Status</span>
+              <span class="hud-val" id="gameStatusText" style="font-size: 1rem; color: var(--accent-green);">Siap Main</span>
+            </div>
+          </div>
+
+          <!-- Arcade Screen Frame -->
+          <div class="arcade-screen-wrapper" id="gameScreenWrapper">
+            <canvas id="gameCanvas" width="760" height="420"></canvas>
+
+            <!-- Start Overlay -->
+            <div class="game-overlay" id="gameStartOverlay">
+              <h3 class="game-overlay-title">Circuit Spark Catcher</h3>
+              <p class="game-overlay-desc">Gerakkan Voltage Core di bagian bawah layar menggunakan mouse, tombol panah Kiri/Kanan, atau tombol sentuh. Tangkap energi dan hindari korsleting!</p>
+              <div class="game-instructions">
+                <span class="instruction-tag"><i data-lucide="zap"></i> ⚡ Voltase: +10 Poin</span>
+                <span class="instruction-tag"><i data-lucide="battery-charging"></i> 🔋 Baterai: +25 Poin</span>
+                <span class="instruction-tag"><i data-lucide="cpu"></i> 💎 Chip IC: +50 Poin</span>
+                <span class="instruction-tag"><i data-lucide="wind"></i> ❄️ RAC Cool: Lambatkan Waktu</span>
+                <span class="instruction-tag" style="color: var(--accent-pink);"><i data-lucide="alert-triangle"></i> 💥 Korsleting: -1 Nyawa</span>
+              </div>
+              <button class="btn btn-primary btn-glow" id="gameStartBtn">
+                <i data-lucide="play"></i>
+                <span>Mulai Permainan</span>
+              </button>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div class="game-overlay hidden" id="gameOverOverlay">
+              <h3 class="game-overlay-title" style="color: var(--accent-pink);">Korsleting Sistem!</h3>
+              <p class="game-overlay-desc">Permainan berakhir. Skor akhir Anda: <strong id="finalScoreVal" style="color: #fff; font-size: 1.4rem;">0</strong></p>
+              <p id="newHighScoreMsg" class="d-none" style="color: var(--accent-amber); font-weight: 700; margin-bottom: 16px;">🎉 Rekor Skor Tertinggi Baru!</p>
+              <button class="btn btn-primary btn-glow" id="gameRestartBtn">
+                <i data-lucide="rotate-ccw"></i>
+                <span>Main Lagi</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Touch Controls -->
+          <div class="arcade-mobile-controls">
+            <button class="touch-btn" id="touchLeftBtn" aria-label="Geser Kiri">
+              <i data-lucide="arrow-left"></i> Kiri
+            </button>
+            <button class="touch-btn" id="touchRightBtn" aria-label="Geser Kanan">
+              Kanan <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -855,6 +1241,7 @@
           <a href="#facts">Data Diri</a>
           <a href="#projects">Portofolio</a>
           <a href="#skills">Keahlian</a>
+          <a href="#minigame">Mini Game</a>
           <a href="#contact">Kontak</a>
         </div>
       </div>

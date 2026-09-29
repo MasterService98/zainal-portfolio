@@ -1,6 +1,7 @@
 /**
  * MUHAMMAD ZAINAL EFENDI - PORTFOLIO & PERSONAL BIO INTERACTIVITY
- * Zain Corp Studio | Ready for Vercel Deployment
+ * Electronic & Electrical Engineer | RAC Specialist | Zain Corp Studio
+ * Ready for Vercel Deployment
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
   ------------------------------------------------------------- */
   function updateWibClock() {
     const now = new Date();
-    // Format to WIB (Asia/Jakarta)
     const options = {
       timeZone: 'Asia/Jakarta',
       hour: '2-digit',
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     3. DYNAMIC TYPING ROTATOR
+     3. DYNAMIC TYPING ROTATOR (ELECTRONIC, ELECTRICAL, RAC, AUDIO)
   ------------------------------------------------------------- */
   const typingElem = document.getElementById('typingText');
   const roles = [
@@ -102,11 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isDeleting) {
       typingElem.textContent = currentRole.substring(0, charIndex - 1);
       charIndex--;
-      typingSpeed = 50;
+      typingSpeed = 45;
     } else {
       typingElem.textContent = currentRole.substring(0, charIndex + 1);
       charIndex++;
-      typingSpeed = 110;
+      typingSpeed = 95;
     }
 
     if (!isDeleting && charIndex === currentRole.length) {
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       osc.start();
       osc.stop(audioCtx.currentTime + duration);
     } catch (e) {
-      // Audio autoplay policy catch
+      // Audio policy catch
     }
   }
 
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateCursor();
 
-    const hoverTargets = document.querySelectorAll('a, button, .bento-card, .project-card, .photo-frame');
+    const hoverTargets = document.querySelectorAll('a, button, .bento-card, .project-card, .photo-frame, .arcade-box');
     hoverTargets.forEach(target => {
       target.addEventListener('mouseenter', () => {
         cursorFollower.style.width = '54px';
@@ -357,8 +357,6 @@ document.addEventListener('DOMContentLoaded', () => {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
         this.size = Math.random() * 2 + 1;
-        this.baseX = this.x;
-        this.baseY = this.y;
         this.vx = (Math.random() - 0.5) * 0.8;
         this.vy = (Math.random() - 0.5) * 0.8;
       }
@@ -367,21 +365,17 @@ document.addEventListener('DOMContentLoaded', () => {
         this.x += this.vx;
         this.y += this.vy;
 
-        // Bounce on boundary
         if (this.x < 0 || this.x > width) this.vx = -this.vx;
         if (this.y < 0 || this.y > height) this.vy = -this.vy;
 
-        // Mouse interaction
         if (mouse.x !== null && mouse.y !== null) {
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < mouse.radius) {
             const force = (mouse.radius - dist) / mouse.radius;
-            const dirX = (dx / dist) * force * 3;
-            const dirY = (dy / dist) * force * 3;
-            this.x -= dirX;
-            this.y -= dirY;
+            this.x -= (dx / dist) * force * 3;
+            this.y -= (dy / dist) * force * 3;
           }
         }
       }
@@ -435,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     10. PROJECT FILTERS & MODAL PREVIEW
+     10. PROJECT FILTERS & MODAL PREVIEW (16 REAL PROJECTS)
   ------------------------------------------------------------- */
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
@@ -451,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const categories = card.getAttribute('data-category') || '';
         if (filterVal === 'all' || categories.includes(filterVal)) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeInUpAnim 0.5s ease forwards';
+          card.style.animation = 'fadeInUpAnim 0.4s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -459,33 +453,129 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Project Data for Modal Preview
+  // Project Data for Modal Preview (All 16 real items)
   const projectsData = {
     '1': {
-      title: 'Perakitan & Wiring Power Amplifier Audio',
-      tag: 'Audio & Elektronika Daya',
-      corp: 'Hardware Lab',
-      image: 'audioenginer1.jpeg',
-      description: 'Dokumentasi perakitan modul penguat daya audio profesional. Mencakup penataan trafo toroid berkapasitas tinggi, kapasitor bank filter daya, sistem pendinginan heatsink bertingkat, serta proteksi speaker untuk menghasilkan keluaran audio bertenaga dan stabil.',
-      tech: ['Power Electronics', 'PCB Circuit Design', 'Toroidal Transformer', 'Capacitor Bank Filter', 'Class H/TD Architecture']
+      title: 'Servis & Penggantian Kompresor AC Outdoor',
+      tag: 'RAC & Pendingin',
+      corp: 'HVAC-R Outdoor Field',
+      image: 'porto1.jpeg',
+      description: 'Dokumentasi pembongkaran casing unit outdoor AC Sharp R32, pemipaan tembaga, pemasangan unit kompresor pengganti, proses pemvakuman sistem sirkulasi dengan pompa vakum Lakoni, serta persiapan alat manifold gauge untuk memastikan sistem bebas uap air sebelum pengisian refrigeran.',
+      tech: ['Kompresor Sharp R32', 'Pompa Vakum Lakoni', 'Manifold Gauge', 'Brazing Pipa Tembaga', 'Leak Detection']
     },
     '2': {
-      title: 'Pengujian True RMS & Kalibrasi DSP Audio Interface',
-      tag: 'Pengukuran & Kalibrasi',
-      corp: 'Audio Instrumentation',
-      image: 'audioenginer2.jpeg',
-      description: 'Pengujian nilai resistansi impedansi output (terbaca 51.59 kΩ pada multimeter digital Pro\'sKit MT-1707 True RMS), kontinuitas jalur sinyal, dan kalibrasi tegangan output pada perangkat audio interface 32-bit 96 kHz 256 DSP guna memastikan integritas sinyal tanpa distorsi.',
-      tech: ['True RMS Multimeter', 'Pro\'sKit MT-1707', 'DSP 32-bit 96kHz', 'Impedance & Continuity Testing']
+      title: 'Uji Arus Beban AC Kompresor (1.82 A)',
+      tag: 'Pengukuran Arus & Kelistrikan',
+      corp: 'Kyoritsu SNAP 2033',
+      image: 'porto2.jpeg',
+      description: 'Pengukuran arus listrik beban kerja kompresor AC saat beroperasi menggunakan tang ampere digital presisi Kyoritsu KEW SNAP 2033. Nilai arus terukur 1.82 A AC, menandakan beban kompresi berada dalam batas kerja aman dan efisien sesuai spesifikasi pabrikan.',
+      tech: ['Kyoritsu KEW SNAP 2033', 'Digital AC/DC Clamp Meter', 'Arus Beban 1.82A', 'Proteksi Kompresor', 'Efisiensi Daya']
     },
     '3': {
-      title: 'Sistem Refrigerasi & Air Conditioning (RAC)',
-      tag: 'RAC & Tata Udara',
-      corp: 'HVAC-R Field',
-      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
-      description: 'Pemeliharaan dan penanganan instalasi sistem tata udara & pendingin ruangan, mencakup pengelasan pemipaan tembaga, proses pemvakuman sistem tertutup untuk membuang uap air, pengukuran tekanan kerja refrigeran dengan manifold gauge, serta pengecekan ampere kompresor.',
-      tech: ['Siklus Refrigerasi', 'AC Split & Inverter', 'Vacuum Evacuation', 'Manifold Pressure Testing', 'Electrical Control Wiring']
+      title: 'Pengkabelan Terminal I/O Mitsubishi MELSEC PLC',
+      tag: 'PLC & Otomasi Industri',
+      corp: 'Mitsubishi Electric',
+      image: 'porto3.jpeg',
+      description: 'Penataan dan pengkabelan blok terminal input/output sistem PLC Mitsubishi MELSEC. Menggunakan sepatu kabel berisolasi kuning dengan nomor pengenal kabel yang tertata rapi untuk memastikan konektivitas sinyal sensor, sakelar, dan aktuator berjalan stabil tanpa interferensi.',
+      tech: ['Mitsubishi MELSEC PLC', 'Terminal Blok I/O', 'Wiring Sepatu Kabel', 'Sinyal Kontrol Industri', 'Standar Panel']
     },
     '4': {
+      title: 'Tuning Parametric EQ & Crossover DSP Multi-Channel',
+      tag: 'DSP Tuning & Audio Engineering',
+      corp: 'Digital Signal Processing',
+      image: 'porto4.jpeg',
+      description: 'Konfigurasi dan penyelarasan kurva respon frekuensi menggunakan antarmuka software prosesor audio digital multi-channel (The Santoso V2.2.12). Pengaturan mencakup filter High-Pass (HP), Low-Pass (LP), Parametric Equalizer (PEQ), gain matrix, delay alignment, dan phase correction.',
+      tech: ['DSP Control Software', 'Parametric EQ', 'Crossover Slope', 'Phase Alignment', 'Matrix Routing']
+    },
+    '5': {
+      title: 'Panel Kontrol Kelistrikan & Catu Daya Industri',
+      tag: 'Panel Kontrol & Distribusi',
+      corp: 'Omron & Panasonic System',
+      image: 'porto5.jpeg',
+      description: 'Perakitan dan penataan panel kontrol kelistrikan industri yang mengintegrasikan power supply switching Omron S8VK-C24024 (24VDC), sirkuit pemutus arus Panasonic BBW-30 (5A), relai kontrol industri, serta jalur terminal distribusi daya dengan pengaman.',
+      tech: ['Omron S8VK-C24024 24V', 'Panasonic Breaker BBW-30', 'Relay Switching', 'Industrial Panel Enclosure', 'Power Distribution']
+    },
+    '6': {
+      title: 'Pengukuran Suhu Termal Presisi Laser (319.8 °C)',
+      tag: 'Uji Termal & Instrumentasi',
+      corp: 'Extech Instruments 42510A',
+      image: 'porto6.jpeg',
+      description: 'Pengukuran temperatur tinggi menggunakan termometer laser inframerah presisi Extech 42510A pada ruang elemen termal industri. Hasil pembacaan real-time menunjukkan suhu 319.8 °C dengan suhu puncak (MAX) mencapai 324.7 °C, memverifikasi disipasi panas kerja sistem.',
+      tech: ['Extech 42510A Laser', 'Infrared Thermometer', 'Suhu Terbaca 319.8°C', 'Emisivitas 0.92', 'Monitoring Disipasi Panas']
+    },
+    '7': {
+      title: 'Traction Battery Charger Industri 48V / 60A',
+      tag: 'Kelistrikan Daya Tinggi',
+      corp: 'Heavy Duty Traction System',
+      image: 'porto7.jpeg',
+      description: 'Pemeriksaan dan pemeliharaan unit pengisi daya baterai traksi bertegangan tinggi 48V dengan arus keluaran 60A. Menggunakan sistem input 3-phase, sirkuit pemutus arus proteksi, dan charge controller auto-equaliser untuk pengisian baterai forklift industri.',
+      tech: ['Tegangan 48V DC', 'Arus 60A Output', '3-Phase Input System', 'Auto Equaliser Controller', 'Proteksi Tegangan Tinggi']
+    },
+    '8': {
+      title: 'Inspeksi Mikroskopis Jalur Sirkuit PCB & Titik Solder',
+      tag: 'Mikroelektronika & Analisis',
+      corp: 'SMD Diagnostics Lab',
+      image: 'porto8.jpeg',
+      description: 'Analisis visual pembesaran tinggi di bawah mikroskop kerja untuk mendeteksi retakan solder mikroskopis (cold solder joint), degradasi jalur tembaga (PCB trace), serta memastikan tidak adanya jembatan timah mikro yang dapat menimbulkan hubungan pendek antar pin IC.',
+      tech: ['Microscopic PCB Inspection', 'SMD Trace Analysis', 'Cold Joint Detection', 'High Precision Solder', 'Quality Control']
+    },
+    '9': {
+      title: 'Perbaikan & Troubleshooting Modul SMPS Power Supply',
+      tag: 'Catu Daya SMPS & Elektronika',
+      corp: 'Switching Power Lab',
+      image: 'porto9.jpeg',
+      description: 'Analisis dan penggantian komponen pada papan catu daya switching (SMPS). Mencakup pengecekan dioda bridge penyearah AC-DC, trafo ferit frekuensi tinggi, transistor daya MOSFET dengan heatsink, serta kapasitor elektrolit low-ESR pada sisi output daya.',
+      tech: ['SMPS Board MPW4603E', 'Switching Transformer', 'MOSFET Heatsink', 'Electrolytic Filter', 'Voltage Regulation']
+    },
+    '10': {
+      title: 'Troubleshooting Perangkat Keras Mikrokontroler',
+      tag: 'Hardware Micro & Embedded',
+      corp: 'Precision Hardware Rework',
+      image: 'porto10.jpeg',
+      description: 'Pembongkaran teliti dan perbaikan perangkat elektronik berbasis chip mikrokontroler SMD. Pengujian jalur catu daya Micro-USB, slot memori SD card, jalur input tombol, serta jalur keluaran sinyal speaker audio internal.',
+      tech: ['Microcontroller MCU Chip', 'Micro-USB Connector', 'SMD Passives', 'Precision Tool Rework', 'Signal Tracing']
+    },
+    '11': {
+      title: 'Panel Otomasi Mitsubishi MELSEC FX3S-30M & Relai',
+      tag: 'Otomasi PLC & Kontrol Panel',
+      corp: 'Mitsubishi FX3S Series',
+      image: 'porto11.jpeg',
+      description: 'Perakitan dan penataan panel boks otomasi terpadu berbasis PLC Mitsubishi MELSEC FX3S-30M. Dilengkapi relai industri berindikator LED, terminal blok terindeks, dan pengkabelan rapi spiral wrap untuk sistem kontrol mesin otomatis.',
+      tech: ['PLC FX3S-30M', 'Industrial Relay 24V', 'Terminal Block Indexing', 'Spiral Cable Wrap', 'Automation Logic']
+    },
+    '12': {
+      title: 'Integrasi Modul Display LCD 16x2 Pembaca ID Kartu',
+      tag: 'Antarmuka Display & Embedded',
+      corp: 'Smart Card Interface',
+      image: 'porto12.jpeg',
+      description: 'Pengujian antarmuka tampilan karakter LCD 16x2 berlatar biru yang menampilkan status pembacaan kartu pintar ("ID Kartu:"). Mengintegrasikan jalur komunikasi paralel 4-bit / I2C dari mikrokontroler pemroses sinyal.',
+      tech: ['LCD 16x2 Karakter', 'Smartcard ID Reader', 'Embedded Interface', 'Paralel/I2C Protocol', 'Real-time Display']
+    },
+    '13': {
+      title: 'Sirkuit Antena Koil Induktif & Mikrokontroler STM8',
+      tag: 'Sirkuit RFID & Frekuensi',
+      corp: 'High Frequency Induction',
+      image: 'porto13.jpeg',
+      description: 'Detail sirkuit penginderaan frekuensi nirkabel yang menggabungkan koil antena induktif tembaga melingkar, kristal osilator 8.000 MHz untuk kestabilan clock, serta mikrokontroler STM8 untuk decoding sinyal kartu identitas.',
+      tech: ['Koil Antena RFID', 'Crystal 8.000 MHz', 'STM8 Microcontroller', 'Resonant Tuning', 'SMD Capacitors']
+    },
+    '14': {
+      title: 'Perakitan & Wiring Power Amplifier Audio Profesional',
+      tag: 'Audio & Elektronika Daya',
+      corp: 'Hardware Audio Lab',
+      image: 'audioenginer1.jpeg',
+      description: 'Dokumentasi perakitan modul penguat daya audio profesional. Mencakup penataan trafo toroid berkapasitas tinggi, kapasitor bank filter daya, sistem pendinginan heatsink bertingkat, serta proteksi speaker untuk menghasilkan keluaran audio bertenaga dan stabil.',
+      tech: ['Power Electronics', 'Toroidal Transformer', 'Capacitor Bank Filter', 'Class H/TD Architecture', 'Speaker Protection']
+    },
+    '15': {
+      title: 'Pengujian True RMS & Kalibrasi DSP Audio (51.59 kΩ)',
+      tag: 'Pengukuran & Kalibrasi',
+      corp: 'True RMS Instrumentation',
+      image: 'audioenginer2.jpeg',
+      description: 'Pengujian nilai resistansi impedansi output (terbaca 51.59 kΩ pada multimeter digital Pro\'sKit MT-1707 True RMS), kontinuitas jalur sinyal, dan kalibrasi tegangan output pada perangkat audio interface 32-bit 96 kHz 256 DSP guna memastikan integritas sinyal tanpa distorsi.',
+      tech: ['Pro\'sKit MT-1707', 'True RMS Multimeter', 'DSP 32-bit 96kHz', 'Impedance 51.59 kΩ', 'Signal Integrity']
+    },
+    '16': {
       title: 'Video Motion Logo Zain Corp',
       tag: 'Motion Identity',
       corp: 'Official Zain Corp Media',
@@ -578,7 +668,351 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* -------------------------------------------------------------
-     11. CONTACT FORM TO MAILTO INTERACTION
+     11. HERO PHOTO SWITCHER (CASUAL <-> STUDIO TECHNICIAN)
+  ------------------------------------------------------------- */
+  const photoSwitchBtn = document.getElementById('photoSwitchBtn');
+  const heroMainImg = document.getElementById('heroMainImage');
+  const photoSwitchText = document.getElementById('photoSwitchText');
+  let currentPhotoState = 0; // 0: ZainCorp.jpeg, 1: personal.jpeg
+
+  photoSwitchBtn?.addEventListener('click', () => {
+    currentPhotoState = currentPhotoState === 0 ? 1 : 0;
+    if (heroMainImg) {
+      heroMainImg.style.opacity = '0';
+      heroMainImg.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        if (currentPhotoState === 1) {
+          heroMainImg.src = 'personal.jpeg';
+          heroMainImg.alt = 'Foto Muhammad Zainal Efendi - Teknisi Studio Workwear';
+          if (photoSwitchText) photoSwitchText.textContent = 'Foto Casual';
+          showToast('Menampilkan Foto Studio Teknisi 🛠️');
+        } else {
+          heroMainImg.src = 'ZainCorp.jpeg';
+          heroMainImg.alt = 'Foto Muhammad Zainal Efendi - Casual Persona';
+          if (photoSwitchText) photoSwitchText.textContent = 'Foto Studio';
+          showToast('Menampilkan Foto Casual Persona ✨');
+        }
+        heroMainImg.style.opacity = '1';
+        heroMainImg.style.transform = 'scale(1)';
+      }, 150);
+    }
+    playTone(650, 'sine', 0.08, 0.1);
+  });
+
+  /* -------------------------------------------------------------
+     12. MINI GAME: CIRCUIT SPARK CATCHER
+  ------------------------------------------------------------- */
+  const gameCanvas = document.getElementById('gameCanvas');
+  const gameScoreElem = document.getElementById('gameScore');
+  const gameHighScoreElem = document.getElementById('gameHighScore');
+  const gameLivesElem = document.getElementById('gameLives');
+  const gameStatusText = document.getElementById('gameStatusText');
+  const gameStartOverlay = document.getElementById('gameStartOverlay');
+  const gameOverOverlay = document.getElementById('gameOverOverlay');
+  const gameStartBtn = document.getElementById('gameStartBtn');
+  const gameRestartBtn = document.getElementById('gameRestartBtn');
+  const finalScoreVal = document.getElementById('finalScoreVal');
+  const newHighScoreMsg = document.getElementById('newHighScoreMsg');
+  const touchLeftBtn = document.getElementById('touchLeftBtn');
+  const touchRightBtn = document.getElementById('touchRightBtn');
+
+  if (gameCanvas) {
+    const gctx = gameCanvas.getContext('2d');
+    let gameRunning = false;
+    let score = 0;
+    let highScore = parseInt(localStorage.getItem('zaincorp_game_high') || '0', 10);
+    let lives = 3;
+    let items = [];
+    let particles = [];
+    let lastSpawn = 0;
+    let spawnRate = 850;
+    let slowTimeUntil = 0;
+    let animId = null;
+
+    if (gameHighScoreElem) gameHighScoreElem.textContent = highScore;
+
+    const player = {
+      x: gameCanvas.width / 2,
+      y: gameCanvas.height - 35,
+      width: 95,
+      height: 14,
+      speed: 9
+    };
+
+    const ITEM_TYPES = [
+      { type: 'spark', label: '⚡', name: 'Volt', color: '#38bdf8', points: 10, radius: 14, speed: 2.6 },
+      { type: 'battery', label: '🔋', name: 'Battery', color: '#34d399', points: 25, radius: 15, speed: 2.9 },
+      { type: 'chip', label: '💎', name: 'IC Chip', color: '#a855f7', points: 50, radius: 16, speed: 3.3 },
+      { type: 'rac', label: '❄️', name: 'RAC Cool', color: '#06b6d4', points: 30, radius: 15, speed: 2.3, isSlow: true },
+      { type: 'surge', label: '⚠️', name: 'Korsleting', color: '#f43f5e', points: -20, radius: 16, speed: 3.5, isHazard: true }
+    ];
+
+    let keys = { left: false, right: false };
+
+    window.addEventListener('keydown', (e) => {
+      if (!gameRunning) return;
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = true;
+      if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = true;
+    });
+
+    window.addEventListener('keyup', (e) => {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = false;
+      if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = false;
+    });
+
+    gameCanvas.addEventListener('mousemove', (e) => {
+      if (!gameRunning) return;
+      const rect = gameCanvas.getBoundingClientRect();
+      const scaleX = gameCanvas.width / rect.width;
+      player.x = (e.clientX - rect.left) * scaleX;
+    });
+
+    gameCanvas.addEventListener('touchmove', (e) => {
+      if (!gameRunning || !e.touches[0]) return;
+      const rect = gameCanvas.getBoundingClientRect();
+      const scaleX = gameCanvas.width / rect.width;
+      player.x = (e.touches[0].clientX - rect.left) * scaleX;
+      e.preventDefault();
+    }, { passive: false });
+
+    touchLeftBtn?.addEventListener('touchstart', (e) => { keys.left = true; e.preventDefault(); });
+    touchLeftBtn?.addEventListener('touchend', () => { keys.left = false; });
+    touchRightBtn?.addEventListener('touchstart', (e) => { keys.right = true; e.preventDefault(); });
+    touchRightBtn?.addEventListener('touchend', () => { keys.right = false; });
+
+    touchLeftBtn?.addEventListener('mousedown', () => { keys.left = true; });
+    touchLeftBtn?.addEventListener('mouseup', () => { keys.left = false; });
+    touchRightBtn?.addEventListener('mousedown', () => { keys.right = true; });
+    touchRightBtn?.addEventListener('mouseup', () => { keys.right = false; });
+
+    function spawnItem() {
+      const rand = Math.random();
+      let selected;
+      if (rand < 0.45) selected = ITEM_TYPES[0]; // ⚡
+      else if (rand < 0.65) selected = ITEM_TYPES[1]; // 🔋
+      else if (rand < 0.78) selected = ITEM_TYPES[2]; // 💎
+      else if (rand < 0.88) selected = ITEM_TYPES[3]; // ❄️
+      else selected = ITEM_TYPES[4]; // ⚠️ hazard
+
+      items.push({
+        ...selected,
+        x: Math.random() * (gameCanvas.width - 60) + 30,
+        y: -20,
+        vy: selected.speed * (0.85 + Math.random() * 0.3)
+      });
+    }
+
+    function createExplosion(x, y, color) {
+      for (let i = 0; i < 14; i++) {
+        particles.push({
+          x: x,
+          y: y,
+          vx: (Math.random() - 0.5) * 6.5,
+          vy: (Math.random() - 0.5) * 6.5,
+          radius: Math.random() * 3 + 1,
+          color: color,
+          alpha: 1
+        });
+      }
+    }
+
+    function startGame() {
+      score = 0;
+      lives = 3;
+      items = [];
+      particles = [];
+      gameRunning = true;
+      slowTimeUntil = 0;
+      spawnRate = 850;
+      if (gameScoreElem) gameScoreElem.textContent = '0';
+      if (gameLivesElem) gameLivesElem.textContent = '⚡⚡⚡';
+      if (gameStatusText) {
+        gameStatusText.textContent = 'Bermain';
+        gameStatusText.style.color = 'var(--accent-cyan)';
+      }
+      gameStartOverlay?.classList.add('hidden');
+      gameOverOverlay?.classList.add('hidden');
+      newHighScoreMsg?.classList.add('d-none');
+      playTone(660, 'triangle', 0.15, 0.2);
+      lastSpawn = performance.now();
+      if (animId) cancelAnimationFrame(animId);
+      requestAnimationFrame(gameLoop);
+    }
+
+    function gameOver() {
+      gameRunning = false;
+      playTone(220, 'sawtooth', 0.4, 0.25);
+      if (gameStatusText) {
+        gameStatusText.textContent = 'Korsleting!';
+        gameStatusText.style.color = 'var(--accent-pink)';
+      }
+      if (finalScoreVal) finalScoreVal.textContent = score;
+
+      if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('zaincorp_game_high', String(highScore));
+        if (gameHighScoreElem) gameHighScoreElem.textContent = highScore;
+        newHighScoreMsg?.classList.remove('d-none');
+        playTone(980, 'sine', 0.3, 0.3);
+      }
+
+      gameOverOverlay?.classList.remove('hidden');
+    }
+
+    function updateGame(now) {
+      if (keys.left) player.x -= player.speed;
+      if (keys.right) player.x += player.speed;
+
+      const halfW = player.width / 2;
+      if (player.x < halfW) player.x = halfW;
+      if (player.x > gameCanvas.width - halfW) player.x = gameCanvas.width - halfW;
+
+      const isSlowed = now < slowTimeUntil;
+      const currentRate = isSlowed ? spawnRate * 1.5 : spawnRate;
+      if (now - lastSpawn > currentRate) {
+        spawnItem();
+        lastSpawn = now;
+        if (spawnRate > 450) spawnRate -= 6;
+      }
+
+      for (let i = items.length - 1; i >= 0; i--) {
+        const item = items[i];
+        item.y += isSlowed ? item.vy * 0.5 : item.vy;
+
+        const hitX = Math.abs(item.x - player.x) < (player.width / 2 + item.radius);
+        const hitY = (item.y + item.radius >= player.y) && (item.y - item.radius <= player.y + player.height);
+
+        if (hitX && hitY) {
+          createExplosion(item.x, item.y, item.color);
+
+          if (item.isHazard) {
+            lives--;
+            playTone(180, 'sawtooth', 0.2, 0.2);
+            if (gameLivesElem) {
+              gameLivesElem.textContent = lives === 2 ? '⚡⚡' : (lives === 1 ? '⚡' : '💀');
+            }
+            if (lives <= 0) {
+              gameOver();
+              return;
+            }
+          } else {
+            score += item.points;
+            if (gameScoreElem) gameScoreElem.textContent = score;
+
+            if (item.isSlow) {
+              slowTimeUntil = now + 5000;
+              playTone(750, 'sine', 0.15, 0.2);
+              showToast('RAC Chill aktif: Gerakan energi melambat ❄️');
+            } else if (item.points === 50) {
+              playTone(880, 'triangle', 0.15, 0.2);
+            } else {
+              playTone(580, 'sine', 0.08, 0.12);
+            }
+          }
+
+          items.splice(i, 1);
+          continue;
+        }
+
+        if (item.y > gameCanvas.height + 30) {
+          items.splice(i, 1);
+        }
+      }
+
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.035;
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+        }
+      }
+    }
+
+    function drawGame() {
+      gctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+      // Grid background
+      gctx.strokeStyle = 'rgba(56, 189, 248, 0.06)';
+      gctx.lineWidth = 1;
+      const gridSize = 38;
+      for (let x = 0; x < gameCanvas.width; x += gridSize) {
+        gctx.beginPath();
+        gctx.moveTo(x, 0);
+        gctx.lineTo(x, gameCanvas.height);
+        gctx.stroke();
+      }
+      for (let y = 0; y < gameCanvas.height; y += gridSize) {
+        gctx.beginPath();
+        gctx.moveTo(0, y);
+        gctx.lineTo(gameCanvas.width, y);
+        gctx.stroke();
+      }
+
+      // Draw Player Voltage Core
+      const px = player.x - player.width / 2;
+      const py = player.y;
+
+      gctx.shadowColor = '#38bdf8';
+      gctx.shadowBlur = 18;
+      gctx.fillStyle = '#38bdf8';
+      gctx.beginPath();
+      gctx.roundRect(px, py, player.width, player.height, 8);
+      gctx.fill();
+
+      const coreGrad = gctx.createLinearGradient(px, py, px + player.width, py);
+      coreGrad.addColorStop(0, '#38bdf8');
+      coreGrad.addColorStop(0.5, '#ffffff');
+      coreGrad.addColorStop(1, '#818cf8');
+      gctx.fillStyle = coreGrad;
+      gctx.beginPath();
+      gctx.roundRect(px + 4, py + 2, player.width - 8, player.height - 4, 6);
+      gctx.fill();
+
+      gctx.shadowBlur = 0;
+
+      // Draw Falling Items
+      for (let item of items) {
+        gctx.shadowColor = item.color;
+        gctx.shadowBlur = 14;
+
+        gctx.fillStyle = item.color;
+        gctx.beginPath();
+        gctx.arc(item.x, item.y, item.radius, 0, Math.PI * 2);
+        gctx.fill();
+
+        gctx.shadowBlur = 0;
+        gctx.font = '14px sans-serif';
+        gctx.textAlign = 'center';
+        gctx.textBaseline = 'middle';
+        gctx.fillText(item.label, item.x, item.y + 1);
+      }
+
+      // Draw Particles
+      for (let p of particles) {
+        gctx.fillStyle = p.color;
+        gctx.globalAlpha = Math.max(0, p.alpha);
+        gctx.beginPath();
+        gctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        gctx.fill();
+        gctx.globalAlpha = 1;
+      }
+    }
+
+    function gameLoop(now) {
+      if (!gameRunning) return;
+      updateGame(now);
+      drawGame();
+      animId = requestAnimationFrame(gameLoop);
+    }
+
+    gameStartBtn?.addEventListener('click', startGame);
+    gameRestartBtn?.addEventListener('click', startGame);
+  }
+
+  /* -------------------------------------------------------------
+     13. CONTACT FORM TO MAILTO INTERACTION
   ------------------------------------------------------------- */
   const contactForm = document.getElementById('contactForm');
   contactForm?.addEventListener('submit', (e) => {
@@ -605,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* -------------------------------------------------------------
-     12. NAVBAR SCROLL & BACK TO TOP BUTTON
+     14. NAVBAR SCROLL & BACK TO TOP BUTTON
   ------------------------------------------------------------- */
   const navbar = document.getElementById('navbar');
   const backToTopBtn = document.getElementById('backToTopBtn');
@@ -632,7 +1066,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* -------------------------------------------------------------
-     13. MOBILE MENU TOGGLE
+     15. MOBILE MENU TOGGLE
   ------------------------------------------------------------- */
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const navLinks = document.getElementById('navLinks');
@@ -652,7 +1086,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Close mobile nav when clicking a link
   navLinks?.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
@@ -661,5 +1094,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  console.log('🚀 Muhammad Zainal Efendi portfolio initialized successfully. Ready for Vercel deployment.');
+  console.log('🚀 Muhammad Zainal Efendi portfolio & Mini Game initialized. Ready for Vercel.');
 });
